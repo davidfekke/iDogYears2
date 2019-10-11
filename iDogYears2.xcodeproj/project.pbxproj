@@ -13,6 +13,7 @@
 		B212B283234C142E00A750B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B212B282234C142E00A750B6 /* Assets.xcassets */; };
 		B212B286234C142E00A750B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B212B285234C142E00A750B6 /* Preview Assets.xcassets */; };
 		B212B289234C142E00A750B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212B287234C142E00A750B6 /* LaunchScreen.storyboard */; };
+		B212B291234C151700A750B6 /* CalculateDogAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212B290234C151700A750B6 /* CalculateDogAge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B212B285234C142E00A750B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B212B288234C142E00A750B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B212B28A234C142E00A750B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B212B290234C151700A750B6 /* CalculateDogAge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateDogAge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B212B280234C142B00A750B6 /* ContentView.swift */,
 				B212B282234C142E00A750B6 /* Assets.xcassets */,
 				B212B287234C142E00A750B6 /* LaunchScreen.storyboard */,
+				B212B290234C151700A750B6 /* CalculateDogAge.swift */,
 				B212B28A234C142E00A750B6 /* Info.plist */,
 				B212B284234C142E00A750B6 /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B212B27D234C142B00A750B6 /* AppDelegate.swift in Sources */,
+				B212B291234C151700A750B6 /* CalculateDogAge.swift in Sources */,
 				B212B27F234C142B00A750B6 /* SceneDelegate.swift in Sources */,
 				B212B281234C142B00A750B6 /* ContentView.swift in Sources */,
 			);
