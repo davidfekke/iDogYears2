@@ -11,50 +11,83 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var age: String = ""
+    @State private var weight: String = ""
     @State private var dogyears: String?
+    @State var errorMessage: String?
     
-    private func getDogYears(for age: Float?) -> String {
-        if let realAge = age {
-            let dogYears = realAge * 7
-            return String(dogYears)
-        } else {
-            return ""
+    var ageNumber: NSNumber {
+        let formatter = NumberFormatter()
+        guard let number = formatter.number(from: age) else {
+            print("not valid to be converted")
+            return 0
         }
+        return number
     }
     
-    private var floatFormatter: NumberFormatter = {
-        let f = NumberFormatter()
-        // allow no currency symbol, extra digits, etc
-        f.isLenient = true
-        f.numberStyle = .decimal
-        return f
-    }()
+    var weightNumber: NSNumber {
+        let formatter = NumberFormatter()
+        guard let number = formatter.number(from: weight) else {
+            print("not valid to be converted")
+            return 0
+        }
+        return number
+    }
     
     var body: some View {
 
             VStack(alignment: .leading) {
                 Text("Enter Dog's Age")
                     .font(.largeTitle)
-                    .background(Color.white)
-                // TextField("Age", value: $age, formatter: floatFormatter)
-                //TextField("Age", value: $age,  formatter: floatFormatter)
-                TextField("Age", text: $age)
-                    .background(Color.pink)
-                    .keyboardType(.decimalPad)
+                    .fontWeight(.black)
+                    .foregroundColor(.black)
                 
+                TextField("Age", text: $age)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .colorScheme(.light)
+                    .onTapGesture {
+                        print("ghjghjhgjk")
+                        if Float(truncating: self.ageNumber) == 0 {
+                            self.age = ""
+                        }
+                    }
+                TextField("Weight in Pounds", text: $weight)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .colorScheme(.light)
+                    .onTapGesture {
+                        print("ghjghjhgjk")
+                        if Float(truncating: self.weightNumber) == 0 {
+                            self.weight = ""
+                        }
+                    }
                 Button(action: processDogyears) {
+                    Spacer()
                     Text("Calculate")
-                        .font(.largeTitle)
-                }
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                }.padding(.all)
+                    .background(/*@START_MENU_TOKEN@*/Color.green/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(8.0)
+                            
+                Divider()
                 if dogyears != nil {
-                    Text("Your pooch is \(self.dogyears ?? "0") in Dogyears!").background(Color(.sRGB, red: 255, green: 255, blue: 255, opacity: 0.5))
+                        Text("Your pooch is \(self.dogyears ?? "0") in Dogyears!")
+                            .colorScheme(.light)
+                        
+                }
+                if errorMessage != nil {
+                    Text(String(self.errorMessage ?? ""))
+                        .foregroundColor(.red)
                 }
                 
                 Spacer()
-                
             }
                 .padding()
-                .background(Image("dogWithPass"))
+            .background(Image("Thumper").resizable().scaledToFill())
             .onTapGesture {
                 self.endEditing()
                 
@@ -63,12 +96,15 @@ struct ContentView: View {
     }
     
     private func processDogyears() -> Void {
-        if let floatAge = Float(age) {
-            let dogyearsFloat = CalculateDogAge.calculate(years: floatAge, weight: 18)
-            print("Processing:  \(floatAge)")
-            self.dogyears = String(dogyearsFloat)
+        print("Age: \(ageNumber), Weight: \(weightNumber)")
+        if Float(truncating: ageNumber) > 0 && Float(truncating: weightNumber) > 0 {
+            let dogyearsFloat = CalculateDogAge.calculate(years: Float(truncating: ageNumber), weight: Float(truncating: weightNumber))
+            self.dogyears = String(format: "%.2f", dogyearsFloat)//String(dogyearsFloat)
+            
+            self.errorMessage = nil
         } else {
-                self.dogyears = nil
+            self.dogyears = nil
+            self.errorMessage = "The age and weight fields both need numerical values"
         }
     }
     
