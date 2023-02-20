@@ -46,7 +46,6 @@ struct ContentView: View {
                     .keyboardType(.decimalPad)
                     .colorScheme(.light)
                     .onTapGesture {
-                        print("ghjghjhgjk")
                         if Float(truncating: self.ageNumber) == 0 {
                             self.age = ""
                         }
@@ -56,7 +55,6 @@ struct ContentView: View {
                     .keyboardType(.decimalPad)
                     .colorScheme(.light)
                     .onTapGesture {
-                        print("ghjghjhgjk")
                         if Float(truncating: self.weightNumber) == 0 {
                             self.weight = ""
                         }

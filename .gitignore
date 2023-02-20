@@ -37,4 +37,9 @@ DerivedData/
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
 # End of https://www.gitignore.io/api/xcode

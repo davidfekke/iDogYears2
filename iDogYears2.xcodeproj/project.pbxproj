@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		B212B286234C142E00A750B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B212B285234C142E00A750B6 /* Preview Assets.xcassets */; };
 		B212B289234C142E00A750B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212B287234C142E00A750B6 /* LaunchScreen.storyboard */; };
 		B212B291234C151700A750B6 /* CalculateDogAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212B290234C151700A750B6 /* CalculateDogAge.swift */; };
+		B234FA3128A9B53C00E82B31 /* AnimalYears in Frameworks */ = {isa = PBXBuildFile; productRef = B234FA3028A9B53C00E82B31 /* AnimalYears */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B234FA3128A9B53C00E82B31 /* AnimalYears in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,9 @@
 			dependencies = (
 			);
 			name = iDogYears2;
+			packageProductDependencies = (
+				B234FA3028A9B53C00E82B31 /* AnimalYears */,
+			);
 			productName = iDogYears2;
 			productReference = B212B279234C142B00A750B6 /* iDogYears.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +129,9 @@
 				Base,
 			);
 			mainGroup = B212B270234C142B00A750B6;
+			packageReferences = (
+				B234FA2F28A9B53C00E82B31 /* XCRemoteSwiftPackageReference "AnimalYears" */,
+			);
 			productRefGroup = B212B27A234C142B00A750B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iDogYears2/iDogYears.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
@@ -316,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iDogYears2/iDogYears.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
@@ -395,8 +405,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iDogYears2/iDogYears.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iDogYears2/Preview Content\"";
@@ -410,7 +421,7 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fekke.dogyearspaid;
 				PRODUCT_NAME = iDogYears;
-				PROVISIONING_PROFILE_SPECIFIER = iDogYearsDistProfile;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -442,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B234FA2F28A9B53C00E82B31 /* XCRemoteSwiftPackageReference "AnimalYears" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davidfekke/AnimalYears";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B234FA3028A9B53C00E82B31 /* AnimalYears */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B234FA2F28A9B53C00E82B31 /* XCRemoteSwiftPackageReference "AnimalYears" */;
+			productName = AnimalYears;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B212B271234C142B00A750B6 /* Project object */;
 }
