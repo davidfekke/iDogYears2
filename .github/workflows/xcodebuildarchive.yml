@@ -17,4 +17,5 @@ jobs:
     - name: Build iDogYears iOS app
       run: fastlane ios build
       env:
-          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}

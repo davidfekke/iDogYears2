@@ -15,6 +15,13 @@
 
 default_platform(:ios)
 
+before_all do
+  ENV['FASTLANE_USER'] = 'david@fekke.com' # Replace with your GitHub username
+  ENV['FASTLANE_PASSWORD'] = ENV['GH_ACCESS_TOKEN']
+  # ... other configurations
+end
+
+
 platform :ios do
   desc "Push a new release build to the App Store"
   lane :release do
