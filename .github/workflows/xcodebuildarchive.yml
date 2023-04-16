@@ -14,9 +14,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
-    - name: Decrypt and install certs and profiles
-      run: ./.github/secrets/decrypt_secret.sh
-      env:
-        PASSPHRASE: ${{ secrets.PASSPHRASE }}
     - name: Build iDogYears iOS app
-      run: xcodebuild -sdk iphoneos -project iDogYears2.xcodeproj -configuration Automatic -scheme iDogYears2
+      run: fastlane ios build

@@ -1,0 +1,1 @@
+iDogYears has been completely rewritten to run on all iOS devices taking advantage of the adaptive views.
