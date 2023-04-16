@@ -35,7 +35,7 @@ platform :ios do
     setup_ci
     match(
       type: "appstore",
-      git_basic_authorization: ENV["GH_ACCESS_TOKEN"],
+      git_url: "https://davidfekke:${GH_ACCESS_TOKEN}@github.com/davidfekke/match.git", 
       readonly: true
     )
 
