@@ -25,7 +25,16 @@ platform :ios do
 
   desc "Run a build of the project"
   lane :build do
-    build_app(scheme: "iDogYears2")
+    setup_ci
+    match(type: 'appstore')
+    get_provisioning_profile
+    build_app(scheme: "iDogYears2",
+      export_options: {
+        provisioningProfiles: {
+          "com.fekke.dogyearspaid" => "AppStore_com.fekke.dogyearspaid"
+        }
+      }
+    )
   end
 
   desc "Sync development"
