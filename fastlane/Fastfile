@@ -33,7 +33,12 @@ platform :ios do
   desc "Run a build of the project"
   lane :build do
     setup_ci
-    match(type: 'appstore')
+    match(
+      type: "appstore",
+      git_basic_authorization: ENV["GH_ACCESS_TOKEN"],
+      readonly: true
+    )
+
     get_provisioning_profile
     build_app(scheme: "iDogYears2",
       export_options: {
