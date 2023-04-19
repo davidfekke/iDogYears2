@@ -15,7 +15,7 @@ jobs:
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
     - name: Clone repository
-      run: git clone https://<TOKEN>@github.com/username/repo.git
+      run: git clone https://<TOKEN>@github.com/davidfekke/match.git
       env:
         TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Build iDogYears iOS app
