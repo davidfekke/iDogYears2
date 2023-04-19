@@ -42,4 +42,7 @@ DerivedData/
 **/.DS_Store
 **/._.DS_Store
 
+.env
+**/.env
+
 # End of https://www.gitignore.io/api/xcode
