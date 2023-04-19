@@ -20,4 +20,6 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         URL_TO_FASTLANE_MATCH_REPO: https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/davidfekke/match.git
+        CI_KEYCHAIN_NAME: fastlane
+        CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
         CI: true

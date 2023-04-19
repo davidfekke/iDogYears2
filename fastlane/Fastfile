@@ -20,8 +20,18 @@ platform :ios do
   lane :beta do
     # increment_build_number(xcodeproj: "iDogYears2.xcodeproj")
     setup_ci if ENV['CI']
+    create_keychain(
+      name: ENV["CI_KEYCHAIN_NAME"],
+      password: ENV["CI_KEYCHAIN_PASSWORD"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false
+    )
     match(
       type: "appstore", 
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
       readonly: true,
       shallow_clone: true,
       verbose: false,
