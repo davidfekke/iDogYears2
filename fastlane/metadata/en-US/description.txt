@@ -1,1 +1,0 @@
-This is a simple program that converts dog years into human years. It uses the canines actual weight plus the actual age to determine the age. 
