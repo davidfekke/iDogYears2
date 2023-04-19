@@ -1,2 +1,2 @@
-git_url("https://github.com/davidfekke/match.git")
+git_url(ENV['URL_TO_FASTLANE_MATCH_REPO'])
 git_branch("master")

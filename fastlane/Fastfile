@@ -22,8 +22,10 @@ platform :ios do
     setup_ci if ENV['CI']
     match(
       type: "appstore", 
-      git_basic_authorization: Base64.strict_encode64(ENV["GH_TOKEN"]),
-      readonly: true
+      readonly: true,
+      shallow_clone: true,
+      verbose: false,
+      clone_branch_directly: true,
     )
     build_app(scheme: "iDogYears2")
     # upload_to_testflight
