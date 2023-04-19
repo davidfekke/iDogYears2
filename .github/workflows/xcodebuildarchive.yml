@@ -15,7 +15,7 @@ jobs:
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
     - name: Build iDogYears iOS app
-      run: fastlane ios build
+      run: fastlane ios beta
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
