@@ -19,7 +19,11 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     # increment_build_number(xcodeproj: "iDogYears2.xcodeproj")
-    match(type: "appstore", readonly: true)
+    match(
+      type: "appstore", 
+      git_basic_authorization: Base64.strict_encode64(ENV["GH_TOKEN"]),
+      readonly: true
+    )
     build_app(scheme: "iDogYears2")
     # upload_to_testflight
   end
