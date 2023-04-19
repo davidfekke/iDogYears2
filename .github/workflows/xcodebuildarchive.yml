@@ -19,4 +19,3 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-        GIT_AUTHORIZATION_HEADER: "Authorization: Bearer ${{ env.GH_TOKEN }}"

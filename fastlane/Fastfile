@@ -22,7 +22,7 @@ platform :ios do
     setup_ci if ENV['CI']
     match(
       type: "appstore", 
-      git_authorization_header: ENV["GIT_AUTHORIZATION_HEADER"],
+      git_basic_authorization: Base64.strict_encode64(ENV["GH_TOKEN"]),
       readonly: true
     )
     build_app(scheme: "iDogYears2")
