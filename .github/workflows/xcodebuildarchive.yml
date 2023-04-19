@@ -14,6 +14,10 @@ jobs:
     - uses: actions/checkout@v3
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
+    - name: Clone repository
+      run: git clone https://<TOKEN>@github.com/username/repo.git
+      env:
+        TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Build iDogYears iOS app
       run: fastlane ios beta
       env:
