@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		B212B289234C142E00A750B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212B287234C142E00A750B6 /* LaunchScreen.storyboard */; };
 		B212B291234C151700A750B6 /* CalculateDogAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212B290234C151700A750B6 /* CalculateDogAge.swift */; };
 		B234FA3128A9B53C00E82B31 /* AnimalYears in Frameworks */ = {isa = PBXBuildFile; productRef = B234FA3028A9B53C00E82B31 /* AnimalYears */; };
+		B26525F82E7B2926007B9080 /* iDogYearsIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B26525F72E7B2926007B9080 /* iDogYearsIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B212B28A234C142E00A750B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B212B290234C151700A750B6 /* CalculateDogAge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateDogAge.swift; sourceTree = "<group>"; };
 		B257BCDF235B8D6E00AE05FB /* iDogYears.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iDogYears.entitlements; sourceTree = "<group>"; };
+		B26525F72E7B2926007B9080 /* iDogYearsIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = iDogYearsIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				B257BCDF235B8D6E00AE05FB /* iDogYears.entitlements */,
 				B212B27C234C142B00A750B6 /* AppDelegate.swift */,
+				B26525F72E7B2926007B9080 /* iDogYearsIcon.icon */,
 				B212B27E234C142B00A750B6 /* SceneDelegate.swift */,
 				B212B280234C142B00A750B6 /* ContentView.swift */,
 				B212B282234C142E00A750B6 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B212B289234C142E00A750B6 /* LaunchScreen.storyboard in Resources */,
+				B26525F82E7B2926007B9080 /* iDogYearsIcon.icon in Resources */,
 				B212B286234C142E00A750B6 /* Preview Assets.xcassets in Resources */,
 				B212B283234C142E00A750B6 /* Assets.xcassets in Resources */,
 			);
@@ -299,16 +303,14 @@
 		B212B28E234C142E00A750B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iDogYearsIcon;
 				CODE_SIGN_ENTITLEMENTS = iDogYears2/iDogYears.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iDogYears2/Preview Content\"";
 				DEVELOPMENT_TEAM = JXRDDKQ33V;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JXRDDKQ33V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iDogYears2/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -317,11 +319,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.4;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fekke.dogyearspaid;
 				PRODUCT_NAME = iDogYears;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.fekke.dogyearspaid";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,16 +332,14 @@
 		B212B28F234C142E00A750B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iDogYearsIcon;
 				CODE_SIGN_ENTITLEMENTS = iDogYears2/iDogYears.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iDogYears2/Preview Content\"";
 				DEVELOPMENT_TEAM = JXRDDKQ33V;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JXRDDKQ33V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iDogYears2/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -349,11 +348,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.4;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fekke.dogyearspaid;
 				PRODUCT_NAME = iDogYears;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.fekke.dogyearspaid";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,16 +416,14 @@
 		B2EC985E251BAB7900CD4522 /* Automatic */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iDogYearsIcon;
 				CODE_SIGN_ENTITLEMENTS = iDogYears2/iDogYears.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iDogYears2/Preview Content\"";
 				DEVELOPMENT_TEAM = JXRDDKQ33V;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JXRDDKQ33V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iDogYears2/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -436,11 +432,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.4;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fekke.dogyearspaid;
 				PRODUCT_NAME = iDogYears;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.fekke.dogyearspaid";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

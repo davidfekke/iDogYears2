@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchDogYears" translatesAutoresizingMaskIntoConstraints="NO" id="fDS-Ab-Cws">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="fDS-Ab-Cws">
+                                <rect key="frame" x="0.0" y="52" width="414" height="844"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyo-6f-SRc">
+                                <rect key="frame" x="20" y="421" width="374" height="54"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Loading...">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="48"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" headerLevel="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fDS-Ab-Cws" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="0uL-kR-Bxv"/>
+                            <constraint firstItem="Pyo-6f-SRc" firstAttribute="centerX" secondItem="fDS-Ab-Cws" secondAttribute="centerX" id="4dO-iN-NBY"/>
+                            <constraint firstItem="Pyo-6f-SRc" firstAttribute="height" secondItem="fDS-Ab-Cws" secondAttribute="height" multiplier="0.0687204" id="4js-ZN-cpC"/>
                             <constraint firstItem="fDS-Ab-Cws" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5vN-kr-Gi0"/>
+                            <constraint firstItem="Pyo-6f-SRc" firstAttribute="width" secondItem="fDS-Ab-Cws" secondAttribute="width" multiplier="0.475845" id="NN0-H6-L80"/>
+                            <constraint firstItem="Pyo-6f-SRc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Zc9-ie-9HF"/>
                             <constraint firstItem="fDS-Ab-Cws" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fNe-UC-PPf"/>
                             <constraint firstItem="fDS-Ab-Cws" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oEK-g3-TXS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -35,6 +53,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchDogYears" width="320" height="480"/>
+        <image name="gradient" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
